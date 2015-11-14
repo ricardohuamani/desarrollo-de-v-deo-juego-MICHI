@@ -86,6 +86,26 @@ private void checkForWinner() {
 	// TODO Auto-generated method stub
 	boolean there_is_a_winner =false;
 	
+	//Horizontal 
+	if(a1.getText()==a2.getText()&& a2.getText()==a3.getText()
+			&& !a1.isClickable())
+		there_is_a_winner=true;
+	else if(b1.getText()==b2.getText() && b2.getText()== b3.getText()
+			  && !a1.isClickable())
+		there_is_a_winner=true;
+	else if(c1.getText()==c2.getText() && c2.getText()== c3.getText()
+			  && !c1.isClickable())
+		there_is_a_winner=true;
+	
+	//vertical
+	if(a1.getText()==a2.getText()&& a2.getText()==a3.getText()
+			&& !a1.isClickable())
+		there_is_a_winner=true;
+	
+	
+	
+	
+	
 	
 	
 	
