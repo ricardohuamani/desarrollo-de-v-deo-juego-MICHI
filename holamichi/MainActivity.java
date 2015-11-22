@@ -104,17 +104,55 @@ private void checkForWinner() {
 	else if(a2.getText()==b2.getText()&& b2.getText()==c2.getText()
 			&& !b2.isClickable())
 		there_is_a_winner=true;
+	else if(a3.getText()==b3.getText()&& b3.getText()==c3.getText()
+			&& !c3.isClickable())
+		there_is_a_winner=true;
+	
+	//diagonal
+	else if(a1.getText()==b2.getText()&& b2.getText()==c3.getText()
+			&& !a1.isClickable())
+		there_is_a_winner=true;
+	else if(a3.getText()==b2.getText()&& b2.getText()==c1.getText()
+			&& !b2.isClickable())
+		there_is_a_winner=true;
 	
 	
 	
+	if(there_is_a_winner){
+		if(!turn){
+			messaje("X Gana");
+		}else{
+			message("O Gana");
+		}	
+		enabledisableAllButtons(false);
+	}
 	
+   }
+
+
+private void enabledisableAllButtons(boolean enable) {
+	// TODO Auto-generated method stub
+	for(Button b :bArray){
+		b.setClickable(enable);
+		if(enable)
+			b.setBackgroundColor(Color.parseColor("33b5e5"));
+	}
 	
-	
-	
+}
+
+
+private void toast(String message) {
+	// TODO Auto-generated method stub
+	Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+}
 	
 }
 
 
 
-	
-}
+
+
+
+
+
+
