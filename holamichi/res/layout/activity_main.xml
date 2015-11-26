@@ -2,17 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="16dp"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
 
     <Button
         android:id="@+id/B2"
@@ -94,5 +88,15 @@
         android:layout_alignBottom="@+id/C2"
         android:layout_alignLeft="@+id/B3"
         android:background="#33b5e5" />
+
+    <Button
+        android:id="@+id/NewGame"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="22dp"
+        android:layout_toRightOf="@+id/B1"
+        android:background="#33b5e5" 
+    	android:text="New Game" />
 
 </RelativeLayout>
